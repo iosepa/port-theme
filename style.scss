@@ -750,8 +750,7 @@ textarea {
   }
   
   
-.menu-topmenu-container #primary-menu,
-.menu-topmenu-container #menuSide {
+#primary-menu, #menuSide {
 
   li {
     list-style: none;
@@ -802,18 +801,13 @@ textarea {
 li a {
     color: black;
 }
-  }
-
-#navDiv {
-    .menu-topmenu-container {
     @media screen and (max-width: $break-small) {
       display: none;
     } 
     @media screen and (min-width: $break-small) {
       display: flex;
     } 
-    }
-}
+  }
 
 
 
@@ -894,7 +888,7 @@ li a {
   transition: 0.3s;
 }
 
-.menu-topmenu-container #menuSide {
+.menu-topmenu-container #menuSide, .menu-top-menu-container #menuSide{
   font-family: $firstFont;
   font-size: 1.2em;
   line-height: 2em;
@@ -1330,13 +1324,16 @@ object {
 --------------------------------------------------------------*/
 .site-footer {
     width: 100%;
-    height: 200px;
+   // height: 200px;
     background-color: $smallNavBg;
     color: $popoutText;
+    display: flex;
+    align-content: center;
     .site-info {
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
+        align-content: center;
         max-width: $outsideWidth;
         width: 100%;
         @media screen and (max-width: $outsideWidth){
@@ -1345,6 +1342,10 @@ object {
         ul {
         list-style: none;
         display: flex;
+    }
+    #footer-bio {
+        display: flex;
+        align-items: center;
     }
     }
 }

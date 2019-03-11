@@ -11,7 +11,7 @@ window.onscroll = function () { shrinkNav(window.scrollY); };
 window.addEventListener('resize', resizeFun);
 
 
-function menuToggle() {
+function menuToggle() { //toggles the class on the hamburger pulls out the menu
 	if (-1 !== button.className.indexOf('change')) {
 		button.className = button.className.replace('change', '');
 	} else {
@@ -28,7 +28,7 @@ function menuToggle() {
 function shrinkNav(scrollPos) {
 
 	const headerEl = document.getElementById("nav");
-	const menu = document.querySelector("#navDiv > .menu-topmenu-container");
+	const menu = document.querySelector("#primary-menu");
 	const toggle = document.getElementById("menu-toggle");
 
 	if (document.getElementById("popout").classList.contains("popped")) menuToggle(); //pull the popout in
@@ -48,7 +48,7 @@ function shrinkNav(scrollPos) {
 
 //keeps menus correct if browser is resized
 function resizeFun() {
-	const menu = document.querySelector("#navDiv > .menu-topmenu-container");
+	const menu = document.querySelector("#primary-menu");
 	const toggle = document.getElementById("menu-toggle");
 
 	if (5 < window.scrollY) return;

@@ -607,16 +607,13 @@ textarea {
     display: none;
     transition: 1s; }
 
-.menu-topmenu-container #primary-menu li,
-.menu-topmenu-container #menuSide li {
+#primary-menu li, #menuSide li {
   list-style: none;
   margin: 0 0.2em; }
-  .menu-topmenu-container #primary-menu li a,
-  .menu-topmenu-container #menuSide li a {
+  #primary-menu li a, #menuSide li a {
     text-decoration: none;
     position: relative; }
-    .menu-topmenu-container #primary-menu li a:before,
-    .menu-topmenu-container #menuSide li a:before {
+    #primary-menu li a:before, #menuSide li a:before {
       content: "";
       position: absolute;
       bottom: -5px;
@@ -627,16 +624,13 @@ textarea {
       transition-duration: 0.5s;
       opacity: 0.5; }
   @media (pointer: fine) {
-    .menu-topmenu-container #primary-menu li:hover,
-    .menu-topmenu-container #menuSide li:hover {
+    #primary-menu li:hover, #menuSide li:hover {
       cursor: pointer; }
-      .menu-topmenu-container #primary-menu li:hover a:before,
-      .menu-topmenu-container #menuSide li:hover a:before {
+      #primary-menu li:hover a:before, #menuSide li:hover a:before {
         width: 100%;
         opacity: 1; } }
   @media screen and (max-width: 480px), screen and (max-height: 480px) {
-    .menu-topmenu-container #primary-menu li,
-    .menu-topmenu-container #menuSide li {
+    #primary-menu li, #menuSide li {
       color: #e5e5e5;
       margin: 10px; } }
 
@@ -647,13 +641,12 @@ textarea {
   pointer-events: auto; }
   #primary-menu li a {
     color: black; }
-
-@media screen and (max-width: 480px) {
-  #navDiv .menu-topmenu-container {
-    display: none; } }
-@media screen and (min-width: 480px) {
-  #navDiv .menu-topmenu-container {
-    display: flex; } }
+  @media screen and (max-width: 480px) {
+    #primary-menu {
+      display: none; } }
+  @media screen and (min-width: 480px) {
+    #primary-menu {
+      display: flex; } }
 
 .toggleBox {
   z-index: 200;
@@ -721,18 +714,18 @@ textarea {
   width: 250px;
   transition: 0.3s; }
 
-.menu-topmenu-container #menuSide {
+.menu-topmenu-container #menuSide, .menu-top-menu-container #menuSide {
   font-family: "Exo";
   font-size: 1.2em;
   line-height: 2em;
   font-weight: 200;
   display: block; }
-  .menu-topmenu-container #menuSide li {
+  .menu-topmenu-container #menuSide li, .menu-top-menu-container #menuSide li {
     list-style-type: none; }
-    .menu-topmenu-container #menuSide li a {
+    .menu-topmenu-container #menuSide li a, .menu-top-menu-container #menuSide li a {
       color: #e5e5e5;
       text-decoration: none; }
-      .menu-topmenu-container #menuSide li a:before {
+      .menu-topmenu-container #menuSide li a:before, .menu-top-menu-container #menuSide li a:before {
         background-color: #4a81c8; }
 
 #modal {
@@ -1062,13 +1055,15 @@ object {
 --------------------------------------------------------------*/
 .site-footer {
   width: 100%;
-  height: 200px;
   background-color: #494141;
-  color: #e5e5e5; }
+  color: #e5e5e5;
+  display: flex;
+  align-content: center; }
   .site-footer .site-info {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    align-content: center;
     max-width: 1120px;
     width: 100%; }
     @media screen and (max-width: 1120px) {
@@ -1077,6 +1072,9 @@ object {
     .site-footer .site-info ul {
       list-style: none;
       display: flex; }
+    .site-footer .site-info #footer-bio {
+      display: flex;
+      align-items: center; }
 
 #menu-social-media {
   width: 100px;
